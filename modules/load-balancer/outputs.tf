@@ -2,6 +2,10 @@ output "alb_arn" {
   value = aws_alb.lb.arn
 }
 
+output "alb_zone_id" {
+  value = aws_alb.lb.zone_id
+}
+
 output "alb_name" {
   value = aws_alb.lb.name
 }
