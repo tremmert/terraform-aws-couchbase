@@ -46,6 +46,8 @@ resource "aws_autoscaling_group" "autoscaling_group" {
 # CREATE LAUNCH CONFIGURATION TO DEFINE WHAT RUNS ON EACH INSTANCE IN THE ASG
 # ---------------------------------------------------------------------------------------------------------------------
 
+
+
 resource "aws_launch_configuration" "launch_configuration" {
   name_prefix   = "${var.cluster_name}-"
   image_id      = var.ami_id
@@ -91,6 +93,9 @@ resource "aws_launch_configuration" "launch_configuration" {
     create_before_destroy = true
   }
 }
+
+
+
 
 # ---------------------------------------------------------------------------------------------------------------------
 # CREATE A SECURITY GROUP TO CONTROL WHAT REQUESTS CAN GO IN AND OUT OF EACH EC2 INSTANCE
